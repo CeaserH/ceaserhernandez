@@ -2,10 +2,11 @@ import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 
 import Hero from "./components/home/Hero";
-import IdentityCards from "./components/home/IdentityCards";
-import BeyondTechnology from "./components/home/BeyondTechnology";
+import SelectedWork from "./components/home/SelectedWork";
+import WhoIAm from "./components/home/WhoIAm";
 import Journey from "./components/home/Journey";
 import Exploring from "./components/home/Exploring";
+import BeyondTheKeyboard from "./components/home/BeyondTheKeyboard";
 
 function App() {
   return (
@@ -14,9 +15,10 @@ function App() {
 
       <main>
         <Hero />
-        <IdentityCards />
-        <BeyondTechnology />
         <Journey />
+        <WhoIAm />
+        <BeyondTheKeyboard />
+        <SelectedWork />
         <Exploring />
       </main>
 

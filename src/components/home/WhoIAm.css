@@ -1,0 +1,116 @@
+.who-i-am {
+  padding: 4.5rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.who-i-am-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.section-label {
+  margin-bottom: 0.4rem;
+  color: var(--primary-bright);
+  font-family: Consolas, monospace;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.section-heading h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: -0.045em;
+}
+
+.section-intro {
+  color: var(--text-secondary);
+  font-family: Consolas, monospace;
+  font-size: 0.7rem;
+}
+
+.who-i-am-content {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.8fr) 1.7fr;
+  gap: clamp(2rem, 6vw, 5rem);
+}
+
+.who-i-am-highlights {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: start;
+  border-top: 1px solid var(--border);
+}
+
+.who-i-am-highlights span {
+  display: flex;
+  flex-direction: column;
+  min-height: 72px;
+  padding: 0.7rem;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  color: var(--text-primary);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.who-i-am-highlights small {
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+  font-family: Consolas, monospace;
+  font-size: 0.58rem;
+}
+
+.who-i-am-story {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  counter-reset: paragraph;
+}
+
+.who-i-am-story p {
+  position: relative;
+  padding-left: 2rem;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.75;
+}
+
+.who-i-am-story p::before {
+  counter-increment: paragraph;
+  content: "0" counter(paragraph);
+  position: absolute;
+  left: 0;
+  top: 0.15rem;
+  color: var(--primary-bright);
+  font-family: Consolas, monospace;
+  font-size: 0.62rem;
+}
+
+@media (max-width: 900px) {
+  .who-i-am-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .who-i-am {
+    padding: 3.5rem 1rem;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

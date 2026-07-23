@@ -1,0 +1,120 @@
+.journey {
+  padding: 4.5rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.journey-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.roadmap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+}
+
+.milestone-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: 0.6rem;
+  min-height: 145px;
+  padding: 1.2rem;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: rgba(17, 17, 17, 0.62);
+  transition: var(--transition);
+}
+
+.milestone-card:hover {
+  background: var(--surface-raised);
+  box-shadow: inset 0 3px var(--primary);
+}
+
+.milestone-number {
+  color: var(--accent);
+  font-family: Consolas, monospace;
+  font-size: 0.65rem;
+}
+
+.milestone-card h3 {
+  margin-bottom: 0.45rem;
+  font-size: 0.95rem;
+}
+
+.milestone-card p {
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  line-height: 1.55;
+}
+
+.current-milestone {
+  background:
+    linear-gradient(135deg, rgba(212, 175, 55, 0.08), transparent 55%),
+    rgba(17, 17, 17, 0.62);
+}
+
+.current-milestone h3 {
+  color: var(--accent);
+}
+
+.current-badge {
+  display: inline-block;
+  margin-bottom: 0.65rem;
+  padding: 0.2rem 0.45rem;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  color: var(--accent);
+  font-family: Consolas, monospace;
+  font-size: 0.56rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.additional-experience {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  padding: 1.1rem 1.25rem;
+  border: 1px solid var(--border);
+}
+
+.additional-experience h3 {
+  font-size: 0.85rem;
+}
+
+.additional-experience ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.8rem 1.5rem;
+  color: var(--text-secondary);
+  font-size: 0.72rem;
+}
+
+@media (max-width: 800px) {
+  .roadmap {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .journey {
+    padding: 3.5rem 1rem;
+  }
+
+  .roadmap {
+    grid-template-columns: 1fr;
+  }
+
+  .additional-experience {
+    flex-direction: column;
+  }
+
+  .additional-experience ul {
+    justify-content: flex-start;
+  }
+}

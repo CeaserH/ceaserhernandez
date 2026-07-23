@@ -1,0 +1,69 @@
+.beyond-keyboard {
+  padding: 4.5rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.beyond-keyboard-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.beyond-keyboard-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+}
+
+.beyond-keyboard-card {
+  min-height: 160px;
+  padding: 1.1rem;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: rgba(17, 17, 17, 0.62);
+  transition: var(--transition);
+}
+
+.beyond-keyboard-card:hover {
+  background: var(--surface-raised);
+  box-shadow: inset 3px 0 var(--primary);
+}
+
+.beyond-keyboard-icon {
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.beyond-keyboard-card p {
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  line-height: 1.55;
+}
+
+.beyond-keyboard-card h3 {
+  margin-bottom: 0.35rem;
+  font-size: 0.88rem;
+}
+
+@media (max-width: 1200px) {
+  .beyond-keyboard-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .beyond-keyboard-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .beyond-keyboard {
+    padding: 3.5rem 1rem;
+  }
+
+  .beyond-keyboard-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

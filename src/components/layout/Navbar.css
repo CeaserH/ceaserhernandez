@@ -1,0 +1,185 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid var(--border);
+  background: rgba(9, 9, 9, 0.88);
+  backdrop-filter: blur(16px);
+}
+
+.navbar-container {
+  max-width: var(--max-width);
+  min-height: 68px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brand-mark {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 42px;
+  height: 42px;
+  overflow: hidden;
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 40px;
+  text-align: center;
+}
+
+.brand-mark::before {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  border-top: 1px solid var(--primary-bright);
+  border-left: 1px solid var(--primary-bright);
+}
+
+.brand-c,
+.brand-h {
+  position: relative;
+  z-index: 1;
+}
+
+.brand-h {
+  color: var(--accent);
+}
+
+.brand-cut {
+  position: absolute;
+  right: -8px;
+  bottom: -8px;
+  width: 18px;
+  height: 18px;
+  rotate: 45deg;
+  border-left: 1px solid var(--accent);
+  background: var(--background);
+}
+
+.brand-name {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  letter-spacing: 0.15em;
+}
+
+.brand-name strong {
+  font-size: 0.72rem;
+}
+
+.brand-name small {
+  margin-top: 0.3rem;
+  color: var(--text-secondary);
+  font-size: 0.58rem;
+}
+
+.navbar-right,
+.navbar-links {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-right {
+  gap: 2rem;
+}
+
+.navbar-links {
+  gap: 1.65rem;
+}
+
+.navbar-links a {
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  transition: var(--transition);
+}
+
+.navbar-links a span {
+  margin-right: 0.35rem;
+  color: var(--primary-bright);
+  font-family: Consolas, monospace;
+  font-size: 0.6rem;
+}
+
+.navbar-links a:hover {
+  color: var(--text-primary);
+}
+
+.resume-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.48rem 0.7rem;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-secondary);
+  font-family: Consolas, monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: var(--transition);
+}
+
+.resume-button span {
+  color: var(--accent);
+}
+
+.resume-button:hover {
+  border-color: var(--accent);
+  color: var(--text-primary);
+}
+
+@media (max-width: 760px) {
+  .brand-name,
+  .resume-button,
+  .navbar-links a span {
+    display: none;
+  }
+
+  .navbar-links {
+    gap: 1rem;
+  }
+
+  .navbar-links a {
+    font-size: 0.72rem;
+  }
+}
+
+@media (max-width: 460px) {
+  .navbar-container {
+    min-height: 60px;
+    padding: 0 0.65rem;
+  }
+
+  .brand-mark {
+    width: 36px;
+    height: 36px;
+    font-size: 0.88rem;
+    line-height: 34px;
+  }
+
+  .navbar-right {
+    gap: 0.5rem;
+  }
+
+  .navbar-links {
+    gap: clamp(0.45rem, 2.6vw, 0.75rem);
+  }
+
+  .navbar-links a {
+    font-size: clamp(0.58rem, 2.7vw, 0.68rem);
+  }
+}
